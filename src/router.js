@@ -6,6 +6,9 @@ function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Route path="/" component={index} />
+      <Route path="/Home" component={index} />
+      <Route path="/Todo" component={index} />
+      <Route path="/List" component={index} />
     </Router>
   );
 }

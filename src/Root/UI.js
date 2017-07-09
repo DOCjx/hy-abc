@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {routerRedux} from 'dva/router';
+import { Spin } from 'antd';
 import Home from './components/Home';
 import List from './components/List';
 import Todo from './components/Todo';
@@ -9,19 +11,20 @@ import { Layout, Menu, Breadcrumb, Button } from 'antd';
 const { Header, Content, Footer } = Layout;
 const moduleMap = {Home, Todo, List};
 
+
 const UI = ({dispatch, app}) => {
 
 	const Module = moduleMap[app.key];
-
 	function handlechangeModule({item, key, keyPath}) {
+		//模块变化时处理路由
+		dispatch(routerRedux.push(`/${key}`));
 		dispatch({
-      type: 'app/changeModule',
-      payload: {
-      	key,
-      	keyPath
-      }
-    });
-
+	      	type: 'app/changeModule',
+	      	payload: {
+	      		key,
+	      		keyPath
+	    	}
+		});
 	}
 	return(
     <Layout>
@@ -51,11 +54,13 @@ const UI = ({dispatch, app}) => {
 	        <Breadcrumb.Item>{app.keyPath}</Breadcrumb.Item>
 	      </Breadcrumb>
 	      <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+				<Spin spinning={app.isLoading}>
 					{Module && <Module />}
+				</Spin>
 	      </div>
 	    </Content>
 	    <Footer style={{ textAlign: 'center' }}>
-	      Ant Design ©2016 Created by Ant UED
+	      hy-abc©2016 Created by DOCer
 	    </Footer>
 	  </Layout>
 	)

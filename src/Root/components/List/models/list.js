@@ -13,5 +13,5 @@ export default {
     'deleteAll'(state, { payload: id }) {
       return [];
     },
-  },
+  }
 };

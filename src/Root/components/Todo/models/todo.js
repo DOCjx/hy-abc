@@ -1,6 +1,5 @@
-/**
- * Created by Homkai on 2016/11/5.
- */
+import { show } from '../../../../services/Todo';
+import { routerRedux } from 'dva/router';
 import {FILTERS} from '../conf';
 
 export default {
@@ -9,7 +8,8 @@ export default {
 		newTodo: '',
 		todoList: [],
 		editingIndex: null,
-		filter: FILTERS.ALL
+		filter: FILTERS.ALL,
+		loginLoading: false,
 	},
 	reducers: {
 		restore(state, {payload: storedState}) {
@@ -99,5 +99,31 @@ export default {
 				todoList
 			};
 		}
-	}
+	},
+  subscriptions: {
+    setup({ dispatch, history }) {
+      
+    },
+  },
+  effects: {
+  	//异步获取数据
+  	*show({
+      payload,
+    }, { call, put }){
+
+      yield put({ 
+    		type: 'app/showLoading'
+      });
+      //异步请求数据
+  		const data = yield call(show, payload);
+  		yield put({ 
+    		type: 'app/hideLoading'
+      });
+      //更新当前组件数据
+  		yield put({ 
+    		type: 'testAsync',
+    		payload: data.data.name
+      });
+    }
+  }
 };

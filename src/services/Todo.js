@@ -1,5 +1,5 @@
 import request from '../utils/request';
 
-export async function query() {
-  return request('/api/users');
+export async function show() {
+  return request('https://api.github.com/repos/homkai/deef');
 }
