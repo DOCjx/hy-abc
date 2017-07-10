@@ -101,12 +101,10 @@ export default {
 		}
 	},
   subscriptions: {
-    setup({ dispatch, history }) {
-      
-    },
+    
   },
   effects: {
-  	//异步获取数据
+  	//异步获取数据初始化页面
   	*show({
       payload,
     }, { call, put }){
