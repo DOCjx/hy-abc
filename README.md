@@ -7,7 +7,7 @@
 -   基于[dva](https://github.com/dvajs/dva)动态加载 Model 和路由，按需加载。
 -   使用[roadhog](https://github.com/sorrycc/roadhog)本地调试和构建，其中Mock功能实现脱离后端独立开发。
 -   适合团队开发
--   类比MVC思想
+-   类比MVC思想优化目录结构
 
 
 ## 目录结构
