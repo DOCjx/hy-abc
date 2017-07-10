@@ -34,6 +34,12 @@ export default {
   subscriptions: {
     setup({ dispatch, history }) {
       function initPage(keyNow){
+          //去除字段里面包含的斜杠
+          if( keyNow.indexOf('/') != -1 ) {
+            keyNow = keyNow.replace('/', '');
+            browserHistory.push(`/${keyNow}`);
+          }
+          console.log(keyNow.indexOf('/'))
           //设置app的model
           dispatch({
             type: "changeModule",
