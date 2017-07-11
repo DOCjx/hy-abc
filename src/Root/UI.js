@@ -33,7 +33,7 @@ const UI = ({dispatch, app}) => {
 	      <Menu
 	        theme="dark"
 	        mode="horizontal"
-	        defaultSelectedKeys={['2']}
+	        defaultSelectedKeys={[`${app.key}`]}
 	        style={{ lineHeight: '64px' }}
 	        onClick={({item, key, keyPath}) => handlechangeModule({item, key, keyPath})}
 	      >
