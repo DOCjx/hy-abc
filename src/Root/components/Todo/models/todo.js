@@ -117,6 +117,7 @@ export default {
   		yield put({ 
     		type: 'app/hideLoading'
       });
+  		console.log(data);
       //更新当前组件数据
   		yield put({ 
     		type: 'testAsync',

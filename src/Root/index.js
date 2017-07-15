@@ -3,4 +3,4 @@ import UI from './UI';
 
 export default connect(
   ({app}) => ({app})
-)(UI);;
+)(UI);
