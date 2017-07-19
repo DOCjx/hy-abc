@@ -1,4 +1,4 @@
-#hy-abc
+# hy-abc
 
 ## 特性
 
@@ -48,7 +48,7 @@
 │	 ├── route.js       # 路由配置
 │	 ├── app.js         # 初始化app
 │	 ├── index.css      # 首页的样式表
-│	 └── index.js       # 入口文件   
+│	 └── index.js       # 入口文件
 ├── package.json     # 项目信息
 ├── .eslintrc        # Eslint配置
 └── .roadhogrc.js    # roadhog配置

@@ -1,10 +1,7 @@
-/**
- * Created by Homkai on 2016/11/5.
- */
 import React from 'react';
 
 export default ({newTodo, dispatch}) => {
-	function onInput(e) {
+    function onInput(e) {
         const content = e.target.value.trim();
         dispatch({
             type: 'todo/inputNewTodo',
@@ -20,17 +17,17 @@ export default ({newTodo, dispatch}) => {
             });
         }
     }
-	return (
-		<header className="header">
-			<h1>todos</h1>
-			<input
-				value={newTodo}
-				autoFocus
-				className="new-todo"
-				placeholder="What needs to be done?"
-				onChange={onInput}
-				onKeyUp={onAdd}
-			/>
-		</header>
-	);
+    return (
+        <header className="header">
+            <h1>todos</h1>
+            <input
+                value={newTodo}
+                autoFocus
+                className="new-todo"
+                placeholder="What needs to be done?"
+                onChange={onInput}
+                onKeyUp={onAdd}
+            />
+        </header>
+    );
 };

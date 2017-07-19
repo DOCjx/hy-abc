@@ -1,6 +1,6 @@
-import { connect } from 'dva';
+import {connect} from 'dva';
 import UI from './UI';
 
 export default connect(
-  ({app}) => ({app})
+    ({app}) => ({app})
 )(UI);

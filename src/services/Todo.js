@@ -1,5 +1,7 @@
-import request from '../utils/request';
+import {request, config} from '../utils/';
+const {api} = config;
+const {todos} = api;
 
 export async function show() {
-  return request('https://api.github.com/repos/homkai/deef');
-}
+    return request(`${todos}`);
+};

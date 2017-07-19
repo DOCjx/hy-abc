@@ -6,9 +6,8 @@ import './index.css';
 // app.use({});
 
 // 3. Model
-// app.model(models);
 models.map(model => app.model(model));
-// console.log(models)
+
 // 4. Router
 app.router(require('./router'));
 

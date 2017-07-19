@@ -1,20 +1,20 @@
 {
-  "entry": "src/index.js",
-  "disableCSSModules": false,
-  "theme": "./src/theme.js",
-  "env": {
-      "development": {
-        "extraBabelPlugins": [
-          "dva-hmr",
-          "transform-runtime",
-          ["import", { "libraryName": "antd", "style": true }]
-        ]
-      },
-      "production": {
-        "extraBabelPlugins": [
-          "transform-runtime",
-          ["import", { "libraryName": "antd", "style": true}]
-        ]
-      }
-  }
+    "entry": "src/index.js",
+    "disableCSSModules": false,
+    "theme": "./src/theme.js",
+    "env": {
+        "development": {
+            "extraBabelPlugins": [
+                "dva-hmr",
+                "transform-runtime",
+                ["import", { "libraryName": "antd", "style": true }]
+            ]
+        },
+        "production": {
+            "extraBabelPlugins": [
+                "transform-runtime",
+                ["import", { "libraryName": "antd", "style": true}]
+            ]
+        }
+    }
 }
