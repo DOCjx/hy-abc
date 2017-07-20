@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 const API = '/api';
 module.exports = {
     apiPrefix: `${API}`,

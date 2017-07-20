@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 import {Router, Route} from 'dva/router';
 import index from './Root/index';
 

@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 import {app} from './app';
 import models from './Root/models';
 import './index.css';

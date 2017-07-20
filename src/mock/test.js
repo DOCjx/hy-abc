@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 const config = require('../utils/config');
 const { apiPrefix } = config;
 const Mock = require('mockjs');

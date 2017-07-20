@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 import React from 'react';
 export default ({hidden, todo, editing, ...callbacks}) => {
     const completed = todo.completed;

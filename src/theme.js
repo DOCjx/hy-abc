@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 const fs = require('fs');
 const path = require('path');
 const lessToJs = require('less-vars-to-js');

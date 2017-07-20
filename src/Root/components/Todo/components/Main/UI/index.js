@@ -1,3 +1,6 @@
+/**
+ * creat by DOCer 2017/7/10
+ */
 import React from 'react';
 import TodoItemUI from './TodoItem.ui';
 import partial from 'lodash/partial';
