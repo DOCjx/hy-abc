@@ -5,7 +5,7 @@ html, body, :global(#root) {
   height: 100%;
 }
 :global{
-    .ant-layout-header.logo {
+    .ant-layout-header .logo {
         width: 120px;
         height: 31px;
         background: #333;

@@ -13,7 +13,6 @@ import {Layout, Menu, Breadcrumb, Button} from 'antd';
 const {Header, Content, Footer} = Layout;
 const moduleMap = {Home, Todo, List};
 
-
 const UI = ({dispatch, app}) => {
     const {key} = app;
     let keyToUpper = key;
