@@ -1,0 +1,56 @@
+:global{
+    .bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: url("../img/bg-loss.png") no-repeat center top;
+        background-size: cover;
+        transition: all .5s ease;
+    }
+    .warpCon{
+        width: 100%;
+        height: 0;
+        transition: all .5s cubic-bezier(0.86, 0.07, 0.23, 0.96);
+        .boatCon{
+            transition: all .5s cubic-bezier(0.86, 0.07, 0.23, 0.96);
+            margin: auto;
+            text-align: center;
+            border: 1px solid #666;
+            h1{
+                color: white;
+            }
+            .detail{
+                display: none;
+            }
+        }
+        .boatFooter{
+            width: 100%;
+            text-align: center;
+            .boat{
+                position: relative;
+                width: 50vh;
+                // background-color: #500455;
+                display: none;
+                margin: auto
+            }
+        }
+    }
+    ::-webkit-scrollbar {   //隐藏滚动条,chrome和360支持
+        display: none;
+    }
+    // @media screen and(max-width:450px) {
+    //     .warpCon{
+    //         .boatCon{
+    //             h1{
+    //                 color: red;
+    //             }
+    //         }
+    //         .boatFooter{
+    //             // .boat{
+    //             //     width:60%;
+    //             // }
+    //         }
+    //     }
+    // }
+}

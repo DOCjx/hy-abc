@@ -1,0 +1,250 @@
+:global{
+.banner {
+    top:0%;
+    left:10%;
+    position:relative;
+    width:80%;
+    height:100%;
+}
+.banner ul{
+    position:absolute;
+    width:50%;
+    left:25%;
+    text-align:center;
+    z-index:11111;
+    li{ position:relative;
+        display:inline-block;          
+        opacity:0.8;
+        //color:#fff;
+        background:#ccc;
+        cursor:pointer;
+        border-radius: 50%;
+    }
+}
+.banner ul li.on { 
+    background:#fff;
+}
+.imgwh{//轮播图片
+    position:relative;			
+}
+.imgwh img{
+    width:130%;
+    height:130%;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+.imgwh a{
+    position:absolute;
+}
+.over {
+    opacity: 1;
+}
+.hide {
+    opacity: 0;
+}
+.leftchange{
+    z-index:11;
+    position:absolute;
+    cursor:pointer;
+    // border: green 3px solid;
+    display:inline-block; 
+    width:5%;
+    .leftimg{
+        z-index:111;
+        position:relative;
+        width:100%;
+        height:100%  
+   }
+   .beijinga{//左边背景图片
+        position:relative;
+        margin-top:-250%;
+        left:-160%;
+        width:400%;
+  }  
+}
+.rightchange{
+    z-index:11;
+    cursor: pointer;
+    position:absolute; 
+    // border: red 3px solid;
+    display:inline-block;
+    width:20%;
+    .rightimg{
+        position:relative;
+        width:25%;
+        height:25%;
+        left:354%; 
+    }
+    .beijingb{//右面背景图片
+        position:absolute;
+        left:352.5%;
+        margin-top:-36%;
+        width:100%;
+   }
+}
+
+
+.beijingc{
+    position:absolute;   
+}
+.beiyong{
+    position:absolute;
+    cursor: pointer;
+    z-index:999999;
+    margin-top:0%;
+    left:75%;
+    width:40%;
+    height:20vh;
+}
+.beiyongb {
+    position: absolute;
+    cursor: pointer;
+    z-index: 999999;
+    margin-top: -11%;
+    left: -18%;
+    width: 40%;
+    height: 40vh;
+}
+@media screen and( min-width:800px) {
+    .banner ul{
+        z-index:11111;
+        height:4vh;
+        margin-top:20%;
+        li{
+          width:2vh;
+          height:2vh;
+        }
+ }
+    .beijingc{
+        margin-top:-9%;//控制大背景图片
+        left:30%;
+        width:38%;
+        z-index:9999;//大小
+        }
+    .imgwh{
+        margin-top:7%;
+        left:16%;
+        width:40%;
+    }
+
+    .leftchange{
+        left:15%;
+        margin-top:5%; 
+    }
+    .rightchange{
+           left:-2%; 
+       margin-top:5%; 
+       //border: 2px #fff solid ;
+    }
+}
+@media screen and( max-width:800px) {
+    .banner ul{
+        height:4vh;
+        margin-top:45%;
+        li{
+          width:2vh;
+          height:2vh;
+        }
+ }
+        .beijingc{
+            margin-top:-13.5%;//控制大背景图片
+            left:16.5%;
+            width:60%;
+            z-index:9999;//大小
+        }
+    .imgwh{
+        margin-top:12.5%;
+        left:-6%;
+        width:63%;
+    }
+
+    .leftchange {
+    z-index: 9;
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    width: 8%;
+    margin-top: 12%;
+    left:2%;
+}
+    .rightchange {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 23%;
+    left: 80%;
+    margin-top: 7%;
+}
+    .rightchange .rightimg {
+    position: relative;
+    width: 37%;
+    height: 50%;
+    left: -4%;
+    margin-top: 17%;
+}
+    .rightchange .beijingb {
+    position: absolute;
+    left: -31.5%;
+    margin-top: -38%;
+    width: 150%;
+}
+
+}
+@media screen and( max-width:500px) {
+    .banner ul{
+        height:4vh;
+        margin-top:60%;
+        li{
+          width:2vh;
+          height:2vh;
+        }
+ }
+        .beijingc{
+            margin-top:-16%;//控制大背景图片
+            left:9%;
+            width:75%;
+            z-index:9999;//大小
+        }
+    .imgwh{
+        margin-top:20%;
+        left:-18.5%;
+        width:80%;
+    }
+
+    .leftchange .leftimg {
+    z-index: 111;
+    position: relative;
+    width: 110%;
+    height: 110%;
+    left:-40%;
+    margin-top:10%;
+}
+    .leftchange .beijinga {
+    position: relative;
+    margin-top: -280%;
+    left: -210%;
+    width: 430%;
+}
+    .rightchange {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 27%;
+    left: 82%;
+    margin-top: 12%;
+}
+    .rightchange .rightimg {
+    position: relative;
+    width: 37%;
+    height: 50%;
+    left: 0%;
+    margin-top: -2%;
+}
+    .rightchange .beijingb {
+    position: absolute;
+    left: -22.5%;
+    margin-top: -52%;
+    width: 140%;
+    }
+  }
+}

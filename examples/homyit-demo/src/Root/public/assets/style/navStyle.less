@@ -1,0 +1,208 @@
+:global {
+    //用户界面应该适应如下布局尺寸：480、600、840、960、1280、1440和1600dp（设备独立像素）
+    @media screen and (min-width: 1580px) {
+        .bigDipper-box {
+            left: 20%;
+            top: 6%;
+        }
+        .nav a{
+            font-size: 16px;
+        }
+        .nav1 {
+            .navPosition(24.5%,14%);
+        }
+        .nav2 {
+            .navPosition(-7.5%,29%);
+        }
+        .nav3 {
+            .navPosition(7%,46.5%);
+        }
+        .nav4 {
+            .navPosition(-53%,61%);
+        }
+        .nav5 {
+            .navPosition(-29.5%,73%);
+        }
+    }
+    @media screen and (max-width: 1580px) {
+        .bigDipper-box {
+            left: 8%;
+            top: 0%;
+        }
+        .nav a{
+            font-size: 16px;
+        }
+        .nav1 {
+            .navPosition(24.5%,14%);
+        }
+        .nav2 {
+            .navPosition(-7.5%,29%);
+        }
+        .nav3 {
+            .navPosition(7%,46.5%);
+        }
+        .nav4 {
+            .navPosition(-53%,61%);
+        }
+        .nav5 {
+            .navPosition(-29.5%,73%);
+        }
+    }
+    @media screen and (max-width: 1180px) {
+        .bigDipper-box {
+            left: 7%;
+            top: 0%;
+        }
+        .nav a{
+            font-size: 15px;
+        }
+        .nav1 {
+            .navPosition(24.5%,14%);
+        }
+        .nav2 {
+            .navPosition(-6.5%,29%);
+        }
+        .nav3 {
+            .navPosition(7.5%,46%);
+        }
+        .nav4 {
+            .navPosition(-48%,61%);
+        }
+        .nav5 {
+            .navPosition(-26.5%,73%);
+        }
+    }
+     @media screen and (max-width: 1030px) {
+        .bigDipper-box {
+            left: 6%;
+            top: 0;
+        }
+        .nav a{
+            font-size: 14px;
+        }
+        .nav1 {
+            .navPosition(24.5%,14%);
+        }
+        .nav2 {
+            .navPosition(-3.5%,29%);
+        }
+        .nav3 {
+            .navPosition(10%,47.5%);
+        }
+        .nav4 {
+            .navPosition(-44%,61%);
+        }
+        .nav5 {
+            .navPosition(-21.5%,73%);
+        }
+    }
+    @media screen and (max-width: 769px) {
+        .bigDipper-box {
+            left: 10%;
+            top: -2%;
+        }
+        .nav a{
+            font-size: 14px;
+        }
+        .nav1 {
+            .navPosition(24.5%,14%);
+        }
+        .nav2 {
+            .navPosition(-3.5%,29%);
+        }
+        .nav3 {
+            .navPosition(10%,47.5%);
+        }
+        .nav4 {
+            .navPosition(-44%,61%);
+        }
+        .nav5 {
+            .navPosition(-21.5%,73%);
+        }
+    }
+    @media screen and (max-width: 485px) {
+        .bigDipper-box {
+            left: 8%;
+            top: 1%;
+        }
+        .nav a{
+            font-size: 12px;
+        }
+        .nav1 {
+            .navPosition(14.5%,10%);
+        }
+        .nav2 {
+            .navPosition(-9.5%,19%);
+        }
+        .nav3 {
+            .navPosition(1%,31%);
+        }
+        .nav4 {
+            .navPosition(-44%,40%);
+        }
+        .nav5 {
+            .navPosition(-29.5%,50%);
+        }
+    }
+    .navPosition(@x,@y) {
+        left:@x;
+        top:@y;
+    }
+	.bigDipper-box {
+        z-index:10;
+        margin: 0 auto;
+        position: fixed;
+        .bigDipper {
+        	width: 30%;
+        	height: 40%;
+        	background-color: black;
+        	display: block;
+        	position: absolute;
+        }
+        .nav {
+            
+            width: 320px;
+            height: 400px; 
+            a {
+                z-index:10;
+            	text-decoration: none;
+	            font-family: "幼圆";
+	            color: white;
+	            position: relative;
+                transition: color 1s;
+                :local {
+                    -webkit-animation:rotateplane 0.15s ;
+                    animation:rotateplane 0.15s ;
+                }
+            }
+            a:hover {
+                color: red;
+            }
+        }
+         
+        }
+       .starChange {
+
+            :local{
+                -webkit-animation:rotateplaneStar 1.2s;
+                animation:rotateplaneStar 1.2s;
+            }
+       } 
+
+}
+@-webkit-keyframes rotateplane
+    {
+    from {font-size:0px;}
+    to {font-size:105%;}
+    }
+@keyframes rotateplaneStar
+    {
+    from {fill:white;}
+    to {fill:red;}
+    }   
+
+@-webkit-keyframes rotateplaneStar
+    {
+    from {fill:white;}
+    to {fill:red;}
+    }
